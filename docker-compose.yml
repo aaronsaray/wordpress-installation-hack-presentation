@@ -1,0 +1,16 @@
+version: '3'
+services:
+  wordpress:
+    container_name: wordpress-hack-www
+    build: ./wordpress
+    ports:
+      - "9080:80"
+    links:
+      - badmysql:badguy.com
+  badmysql:
+    container_name: wordpress-hack-bad-mysql
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    volumes:
+      - ./badguy/hacked_wordpress.sql:/docker-entrypoint-initdb.d/hacked_wordpress.sql
