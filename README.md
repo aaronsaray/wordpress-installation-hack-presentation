@@ -22,8 +22,8 @@ Add the following line to your `/etc/hosts` file to make it easier to demonstrat
 5. Go to plugins and upload plugin from `badguy/sources/wordpress-plugin/hack-website.php`
 6. Activate plugin
 7. Note how the site is back to being installed
-8. Using Good Guy's browser, run the installation process.
-9. As Bad Guy, request a URL and add `n4v4ac=bHMgLWxh` to the GET parameter - show that the result of `ls -la` was on the bottom of the page
+8. Using Good Guy's browser, run the installation process. (database `wordpress` username `root` password is blank, host is `localhost`)
+9. As Bad Guy, request a URL like the first page and add `n4v4ac=bHMgLWxh` to the GET parameter - show that the result of `ls -la` was on the bottom of the page
 
 ## Explanation
 
